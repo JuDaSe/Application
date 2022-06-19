@@ -1,0 +1,20 @@
+@media all {
+    body {
+        font-family: sans-serif;
+    }
+    #app {
+        display: flex;
+    }
+    .menu {
+        flex: 3;
+    }
+    .appComponente {
+        flex: 20;
+        border: 1px solid;
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+    .completado {
+        text-decoration: line-through;
+    }
+}
