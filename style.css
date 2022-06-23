@@ -9,21 +9,27 @@ ul{
 }
 
 table{
-    background-color: white;
-    width: 100%;
-    text-align: center;
-    border-collapse: collapse;
+    text-align: start;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-th,td{
-    font-size: 20px;
-    padding:25px;
+td{
+    font-size: 18px;
+    padding: 11px;
+    position: relative;
+
+}
+
+th{
+    font-size: 17.2px;
+    padding:12px;
 }
 
 thead{
-    padding:10px;
     background-color: #246355;
-    border-bottom: solid 5px #0f362d;
+    border-bottom: solid 1px #0f362d;
     color: white;
 }
 
@@ -34,12 +40,44 @@ form {
 }
  
 label {
+    padding: 6px;
     float: left;
     width: 200px;
-    padding-right: 24px;
 }
  
 input,select {
     float: left;
-    width: calc(100% - 200px);
+    width: calc(100% - 210px);
+}
+
+#add__btn{
+    font-size:10px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    color:white;
+    background:#638cb5;
+    border:0px;
+    width:80px;
+    height:19px;
+}
+
+#edit__btn{
+    font-size:10px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    color:white;
+    background:#98e580;
+    border:0px;
+    width:80px;
+    height:19px;
+}
+#del__btn{
+    font-size:10px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    color:white;
+    background:#f85151;
+    border:0px;
+    width:80px;
+    height:19px;
 }

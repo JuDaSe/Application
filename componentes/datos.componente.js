@@ -1,4 +1,4 @@
-const API   = 'https://crudcrud.com/api/aa2807a49a7343c081ebaa2dfc43b2eb'
+const API   = 'https://crudcrud.com/api/acd1d6876e3f4ae6b9efb5ec8af07d5d'
 const model = '/personas'
 
 const Datos = {
@@ -48,6 +48,7 @@ const CrudDatos = Vue.component('datos-componente', {
         return {
             persona: {},
             items: [],
+            pass: false
         }
     },
     methods: {
@@ -114,7 +115,7 @@ const CrudDatos = Vue.component('datos-componente', {
     <input type="number" id="edad" value="edad" v-model="persona.edad">
 
     <label for="Contraseña">Contraseña</label>
-    <input type="password" id="contraseña" value="contraseña" v-model="persona.pass">
+    <input type="password" id="password" value="password" v-model="persona.pass">
 
     <label for="Correo">Correo</label>
     <input type="email" id="correo" value="correo" v-model="persona.email">
@@ -133,39 +134,40 @@ const CrudDatos = Vue.component('datos-componente', {
     </select>
 
     <label for="Altura">Altura</label>
-    <input type="number" id="contraseña" value="contraseña" v-model="persona.altura">
+    <input type="number" id="altura" value="altura" v-model="persona.altura">
     </form>
     
-     <button @click="guardarItem()">Agregar</button>
+     <button id="add__btn" @click="guardarItem()">Agregar</button>
      <hr>
      <ul>
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Edad</th>
-                <th>Contraseña</th> 
-                <th>Correo</th> 
-                <th>Genero</th> 
-                <th>Altura</th> 
-                <th>Activo</th> 
-                <th>Fecha Creación</th>
-            </tr>
-        </thead>
-        <table>
+     <thead>
+     <tr>
+         <th>Nombre</th>
+         <th>Apellido</th>
+         <th>Edad</th>
+         <th>Contraseña</th> 
+         <th>Correo</th> 
+         <th>Genero</th> 
+         <th>Altura</th> 
+         <th>Activo</th> 
+         <th>Fecha Creación</th>
+     </tr>
+     </thead>
          <li v-for="(itm, index) in items" :key="index">
-              <td>{{itm.nombre}}
-              <td>{{itm.apellido}}</td>
-              <td>{{itm.edad}}</td> 
-              <td>{{itm.pass}}</td> 
-              <td>{{itm.email}}</td> 
-              <td>{{itm.genero}}</td> 
-              <td>{{itm.altura}} CM</td> 
-              <td>{{itm.activo}}</td> 
-              <td>{{obtenerFecha()}}</td>
-              <td> <button @click="eliminarItem(itm._id)">Eliminar</button></td>
-              <td><button @click="editarItem(itm)">Editar</button></td>
-            </table>
+         <table>
+              <td >{{itm.nombre}}
+              <td >{{itm.apellido}}</td>
+              <td >{{itm.edad}}</td> 
+              <td >{{itm.pass}}</td> 
+              <td >{{itm.email}}</td> 
+              <td >{{itm.genero}}</td> 
+              <td >{{itm.altura}} CM</td> 
+              <td >{{itm.activo}}</td> 
+              <td >{{obtenerFecha()}}</td>
+         <td><button id="edit__btn" @click="editarItem(itm)">Editar</button></td>
+         <td> <button id="del__btn" @click="eliminarItem(itm._id)">Eliminar</button></td>
+
+            </table>  
          </li>
      </ul>
      </div>
